@@ -71,5 +71,6 @@ The code book was generated semi-automatically. The following R code was used to
     vars <- sub("(.*)(std\\(\\))(.*)","\\1\\2\\3@@@Standard deviation", vars)
     vars <- sub("(.)([^-]*)(.*)","\\1\\2\\3 \\2", vars)
     vars <- sub("(.*)(-)([XYZ]{1,3})( .*)", "\\1\\2\\3\\4 in the \\3 dimension", vars)
+    write.table(vars, "vars.txt", quote=F, row.names=F, col.names=F)
 
 The @@@ substring was added to denote where a new line was to be added.
